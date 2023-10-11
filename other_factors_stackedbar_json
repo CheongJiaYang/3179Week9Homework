@@ -1,0 +1,41 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "2018.csv",
+      "format": {"type": "csv"}
+    },
+    "transform": [
+      {
+        "filter": {
+          "field": "Country or region",
+          "oneOf": ["Finland", "Norway", "Denmark", "Iceland", "Switzerland", "Netherlands", "Canada", "New Zealand", "Sweden", "Australia"]
+        }
+      },
+      {
+        "calculate": "datum['Country or region']",
+        "as": "country"
+      },
+      {
+        "fold": ["Social support", "Freedom to make life choices", "Perceptions of corruption"],
+        "as": ["Attribute", "Value"]
+      },
+      {
+        "sort": [{"field": "Overall Rank"}]
+      }
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": {"field": "country", "type": "nominal", "title": "Country or region", "sort": {"op": "sum", "field": "Overall Rank"}},
+      "y": {"field": "Value", "type": "quantitative", "title": "Value"},
+      "color": {"field": "Attribute", "type": "nominal", "title": "Attribute"},
+      "tooltip": [
+        {"field": "country", "title": "Country or region"},
+        {"field": "Value", "title": "Value"},
+        {"field": "Attribute", "title": "Attribute"}
+      ]
+    },
+    "title": "Stacked Bar Chart of Social Support, Freedom, and Corruption for Selected Countries",
+    "width": 600,
+    "height": 400
+  }
+  
