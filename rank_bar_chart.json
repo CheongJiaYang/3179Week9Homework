@@ -1,0 +1,43 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "2018.csv"
+    },
+    "transform": [
+      {
+        "filter": {
+          "field": "Overall rank",
+          "lte": {"expr": "rank"}
+        }
+      },
+      {
+        "calculate": "format(datum.Score, '.2f')",
+        "as": "ScoreTooltip"
+      }
+    ],
+    "params": [
+      {
+        "name": "rank",
+        "value": 1,
+        "bind": {"input": "range", "min": 1, "max": 10, "step": 1}
+      }
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "Country or region",
+        "type": "ordinal",
+        "sort": {"field": "Score", "op": "sum", "order": "descending"}
+      },
+      "y": {"field": "Score", "type": "quantitative"},
+      "color": {"field": "Country or region", "type": "nominal"},
+      "tooltip": [
+        {"field": "Country or region", "type": "nominal"},
+        {"field": "ScoreTooltip", "type": "quantitative"}
+      ]
+    },
+    "config": {
+      "view": {"step": 20}
+    }
+  }
+  

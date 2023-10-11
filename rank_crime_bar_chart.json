@@ -1,0 +1,28 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "world_crime_index_2018.csv"
+    },
+    "transform": [
+      {
+        "filter": {
+          "field": "Country",
+          "oneOf": ["Finland", "Norway", "Denmark", "Iceland", "Switzerland", "Netherlands", "Canada", "New Zealand", "Sweden", "Australia"]
+        }
+      }
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "Country",
+        "type": "ordinal",
+        "axis": {"labelAngle": 45},
+        "sort": null
+      },
+      "y": {"field": "Crime Index", "type": "quantitative", "axis": {"orient": "right"}}
+    },
+    "config": {
+      "view": {"step": 20}
+    }
+  }
+  
