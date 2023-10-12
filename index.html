@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vega@5.25.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.12.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.22.1"></script>
+    <script src="js/vega_lite_vis.js"></script>
     <link rel = "stylesheet" href = "style.css">
     <title>World Happiness and Crime Index</title>
 </head>
@@ -17,12 +18,13 @@
       <div id="happiness-section">
         <h2>World Happiness Report</h2>
         <p>
-          Introduce the World Happiness Report here. This report measures the happiness levels in various countries worldwide. The choropleth map below shows the happiness scores by country:
+          Happiness, while it may be a subjective concept for many, is an important factor in determining the well-being of a country. 
+          One method in which we have produced to measure happiness in an objection fashion is through the use of the World Happiness Index.
+          The World Happiness Report is a landmark survey of the state of global happiness. It ranks 156 countries by how happy their citizens perceive themselves to be. 
+          The report is produced by the United Nations Sustainable Development Solutions Network in partnership with the Ernesto Illy Foundation.
         </p>
         <!-- Embed happiness choropleth map -->
-        <div id="happiness-map">
-          <embed src="happiness_choropleth_map.json" type="application/json" />
-        </div>
+        <div id="happiness_choropleth_map"></div>
       </div>
   
       <div id="crime-section">
@@ -31,9 +33,7 @@
           Introduce the World Crime Index here. This index measures crime rates in different countries. The choropleth map below displays crime rates by country:
         </p>
         <!-- Embed crime choropleth map -->
-        <div id="crime-map">
-          <embed src="crime_choropleth_map.vg.json" type="application/json" />
-        </div>
+        <div id="crime_choropleth_map"></div>
       </div>
   
       <div id="impact-section">
@@ -42,12 +42,10 @@
           Discuss how crime rates by country may affect the World Happiness Report. Use the bar charts below to visualize the correlation between crime rates and happiness scores.
         </p>
         <!-- Embed rank crime bar chart -->
-        <div id="rank-crime-chart">
-          <embed src="rank_crime_bar_chart.json" type="application/json" />
+        <div id="rank_crime_bar_chart"></div>
         </div>
         <!-- Embed rank bar chart -->
-        <div id="rank-chart">
-          <embed src="rank_bar_chart.json" type="application/json" />
+        <div id="rank_bar_chart"> </div>
         </div>
       </div>
   
@@ -57,8 +55,7 @@
           Explore other potential factors that may influence happiness levels. The stacked bar chart below represents various factors and their impact on happiness.
         </p>
         <!-- Embed other factors stacked bar chart -->
-        <div id="other-factors-chart">
-          <embed src="other_factors_stackedbar_json" type="application/json" />
+        <div id="other_factors_stackedbar"></div>
         </div>
       </div>
   
@@ -68,8 +65,7 @@
           Delve into how GDP per capita and life expectancy can affect the World Happiness Report. The bubble plot below illustrates the relationship between these factors and happiness scores.
         </p>
         <!-- Embed GDP bubble plot -->
-        <div id="gdp-chart">
-          <embed src="gdp_bubbleplot.json" type="application/json" />
+        <div id="gdp_bubbleplot"></div>
         </div>
       </div>
     </div>
