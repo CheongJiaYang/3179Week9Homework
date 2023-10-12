@@ -1,0 +1,43 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "2018.csv"
+    },
+    "mark": "circle",
+    "encoding": {
+      "x": {
+        "field": "Healthy life expectancy",
+        "type": "quantitative",
+        "axis": {"title": "Healthy Life Expectancy"}
+      },
+      "y": {
+        "field": "GDP per capita",
+        "type": "quantitative",
+        "axis": {"title": "GDP per Capita"}
+      },
+      "size": {
+        "field": "Score",
+        "type": "quantitative",
+        "title": "Score"
+      },
+      "color": {
+        "field": "Country or region",
+        "type": "nominal",
+        "scale": {"scheme": "category20"},
+        "title": "Country or Region"
+      },
+      "tooltip": [
+        {"field": "Score", "type": "quantitative", "title": "Score"},
+        {"field": "Country or region", "type": "nominal", "title": "Country or Region"},
+        {"field": "Healthy life expectancy", "type": "quantitative", "title": "Healthy Life Expectancy"},
+        {"field": "GDP per capita", "type": "quantitative", "title": "GDP per Capita"}
+      ]
+    },
+    "config": {
+      "view": {
+        "height": 400,
+        "width": 600
+      }
+    }
+  }
+  
