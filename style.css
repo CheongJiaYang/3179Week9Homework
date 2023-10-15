@@ -1,14 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
 body {
+    font-family: 'Arvo', sans-serif;
     background-color: #f3f3f3;
     text-align: center; /* Center-align text in the body */
 }
 
 h1 {
     color: #333;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arvo', sans-serif;
+    font-size: 48px;
     text-align: center; /* Center-align text within h1 elements */
 }
 
+h2 {
+    color: #333;
+    font-family: 'Arvo', sans-serif;
+    font-size: 60px;
+    text-align: center; /* Center-align text within h2 elements */
+}
 p {
     color: #000000;
     text-align: center; /* Justify text within p elements */
@@ -21,3 +30,16 @@ p {
     width: 50%;
     text-align: center; /* Center-align text within elements with the "center" class */
 }
+
+.bolded {
+    font-weight: bolder;
+  }
+  
+.coloured {
+    color: #800000;
+  }
+
+.coloured2 {
+    color: #242254;
+  }
+

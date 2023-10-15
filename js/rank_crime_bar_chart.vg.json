@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Top 10 Countries with the Highest Crime Index",
+    "title": "Crime Indexs of the Top 10 Happiest Countries",
     "data": {
       "url": "https://raw.githubusercontent.com/CheongJiaYang/3179Week9Homework/main/data/world_crime_index_2018.csv"
     },

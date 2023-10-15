@@ -15,44 +15,105 @@
 
 <body>
     <div id="container">
-      <div id="happiness-section">
-        <h2>World Happiness Report</h2>
-        <p>
-          Happiness, while it may be a subjective concept for many, is an important factor in determining the well-being of a country. 
-          One method in which we have produced to measure happiness in an objection fashion is through the use of the World Happiness Index.
-          The World Happiness Report is a landmark survey of the state of global happiness. It ranks 156 countries by how happy their citizens perceive themselves to be. 
-          The report is produced by the United Nations Sustainable Development Solutions Network in partnership with the Ernesto Illy Foundation.
-        </p>
-        <!-- Embed happiness choropleth map -->
-        <div id="happiness_choropleth_map"></div>
-      </div>
-  
-      <div id="crime-section">
-        <h2>World Crime Index</h2>
-        <p>
-          Introduce the World Crime Index here. This index measures crime rates in different countries. The choropleth map below displays crime rates by country:
-        </p>
-        <!-- Embed crime choropleth map -->
-        <div id="crime_choropleth_map"></div>
-      </div>
-  
-      <div id="impact-section">
-        <h2>Impact of Crime Rate on Happiness</h2>
-        <p>
-          Discuss how crime rates by country may affect the World Happiness Report. Use the bar charts below to visualize the correlation between crime rates and happiness scores.
-        </p>
-        <!-- Embed rank crime bar chart -->
-        <div id="rank_crime_bar_chart"></div>
+      <div id="happiness-section" class = "horizontal">
+        <h2>How<br>
+        <span style="color: red"><b>CRIME RATES</b><br></span>
+        affect<br>
+        <span style="color: red"><b>WORLD HAPPINESS INDEX</b></h2></span>
+        <div style="display: flex; flex-direction: row; align-items: center;">
+          <div style="flex: 1;">
+            <h1>Measuring Happiness?</h1>
+            <p>
+              Happiness, as a concept is <b>subjective.</b><br>
+              <br> 
+              As a result, we have resorted to using <span style="color:blue"><b>The World Happiness Index</b></span> to measure happiness. <br>
+              <br>
+              The graph to the right is a visualization of the <span style="color:blue"><b>World Happiness Index</b></span> for the year 2018. <br>
+              <br>
+              (note: there are a few countries missing from the graph due to lack of data.)
+            </p>
+          </div>
+          <div style="flex: 1;">
+            <!-- Embed happiness choropleth map -->
+            <div id="happiness_choropleth_map"></div>
+          </div>
         </div>
-        <!-- Embed rank bar chart -->
-        <div id="rank_bar_chart"> </div>
+
+
+
+        <p>
+          <br>
+          <br>
+          <br>
+        </p>
+
+
+        
+        <div id="crime-section" style="display: flex; flex-direction: row;">
+          <div style="flex: 1;">
+            <div id="crime_choropleth_map" style="width: 100%; height: 400px;"></div>
+          </div>
+          <div style="flex: 1;">
+            <h1>Measuring Crime?</h1>
+            <p>
+              Crime, however, can be easily measured based on the <b>number of cases per year.</b><br>
+              <br>
+              <span style="color: red;"><b>The World Crime Index</b></span>, comes in handy as it accurately measured the amount of crime<br>
+              committed by each country. <br>
+              <br>
+              As such, the graph to the left is a visualization of the <span style="color:red"><b>World Crime Index</b></span> for the year 2018. <br>
+              <br>
+              (note: there are a few countries missing from the graph due to lack of data.)
+            </p>
+            <!-- Embed crime choropleth map -->
+            <div id="crime_choropleth_map" style="width: 100%; height: 400px;"></div>
+          </div>
         </div>
-      </div>
+        
+  
+        <div id="impact-section">
+          <h2>So, Does It Matter?</h2>
+          <div id="real-impact-section" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+            <div style="flex: 1; text-align: left; max-width: 40%;">
+              <!-- Embed rank crime bar chart with increased size -->
+              <div id="rank_bar_chart" style="width: 100%; height: 400px;"></div>
+            </div>
+            <p style="text-align: center;">
+              All those stats, and does it really matter? <br>
+              <br>
+              The graph to the left is a visualization of the <b>TOP 10 COUNTRIES</b> with the <span style="color:blue"><b>HIGHEST HAPPINESS INDEX.</b></span><br>
+              <br>
+              The graph to the right is a visualization of the <span style="color:red"><b>CRIME RATES</b></span> of the <b>TOP 10 COUNTRIES</b> with the <span style="color:blue"><b>HIGHEST HAPPINESS INDEX.</b></span><br>
+              <br>
+              As we can observe, the happiness countries are usually found on the lower ends of the crime rate graph.<br>
+              <br> 
+              It's evident that there is an <b>indirect correlation.</b><br>
+              <br>
+              However, is there more to the story?
+            </p>
+            <div style="flex: 1; text-align: right; max-width: 40%;">
+              <!-- Embed rank bar chart with increased size -->
+              <div id="rank_crime_bar_chart" style="width: 100%; height: 400px;"></div>
+            </div>
+          </div>
+        </div>
+        
   
       <div id="factors-section">
         <h2>Other Factors Affecting Happiness</h2>
         <p>
-          Explore other potential factors that may influence happiness levels. The stacked bar chart below represents various factors and their impact on happiness.
+          When it comes to happiness, it's not just about crime. Other important things include:<br>
+        </br>
+        <b><span style="color:darkblue">Freedom to Make Choices:</span></b> People are happier when they can decide how they want to live their lives.<br>
+        <br>
+        <b><span style="color:darkorange">Corruption Perceptions:</span></b> Trust in government and institutions affects happiness. Less corruption means more happiness.<br>
+        <br>
+        <b><span style="color:darkred">Social Support:</span></b> Having friends and family who care about you makes a big difference in how happy you feel.<br>
+        <br>  
+        These factors show that happiness is about more than just having a good income. It's also about freedom, trust, and the people in your life.<br>
+        <br>
+        The graph below shows the <span style="color:blue"><b>TOP 10 HAPPIEST COUNTRIES</b></span> and the factors that affect happiness for the year <b>2018</b>.
+        <br>
         </p>
         <!-- Embed other factors stacked bar chart -->
         <div id="other_factors_stackedbar"></div>
@@ -62,10 +123,22 @@
       <div id="gdp-section">
         <h2>Impact of GDP and Life Expectancy on Happiness</h2>
         <p>
-          Delve into how GDP per capita and life expectancy can affect the World Happiness Report. The bubble plot below illustrates the relationship between these factors and happiness scores.
+          <b><span style="color:rgb(27, 170, 27)">Gross Domestic Product (GDP) per capita</span></b> serves as a measure of economic prosperity and access to resources within a country.<br>
+          Countries with higher <b><span style="color:rgb(27, 170, 27)">GDP per capita</span></b> tend to have better <b>infrastructure, education, and healthcare,</b> all of which contribute to an improved <b>quality of life.</b><br>  
+          <br>
+          <b><span style="color:darkblue">Life expectancy</span></b> is a key indicator of a nation's overall health and well-being.<br>
+          Longer <b><span style="color:darkblue">life expectancy</span></b> often correlates with a better <b>healthcare system, lifestyle, and social support,</b> all of which are linked to higher levels of <b>happiness</b>. <br>
+          <br>
         </p>
         <!-- Embed GDP bubble plot -->
         <div id="gdp_bubbleplot"></div>
+        <p>As we can see from this graph that plots <b><span style="color:rgb(27, 170, 27)">GDP per capita</span> and <span style="color:darkblue">Life Expectancy</span></b>, we can observe that the lower the <b><span style="color:rgb(27, 170, 27)">GDP per capita</span> and <br>
+          <span style="color:darkblue">life Expectancy</span></b>, the lower the levels of <b>happiness.</b><br>
+        <br>
+        The countries with overall lower <b><span style="color:rgb(27, 170, 27)">GDP </span> + <span style="color:darkblue">Life Expectancy</span></b> rank around an average of <b>3 to 4 on the happiness score</b>, while <br>
+        the countries with overall higher <b><span style="color:rgb(27, 170, 27)">GDP</span> + <span style="color:darkblue">Life Expectancy</span></b> rank around an average of <b>6 to 7 on the happiness score.</b><br>
+        <br>
+        </p>
         </div>
       </div>
     </div>
@@ -73,7 +146,7 @@
     <div id="conclusion">
       <h2>Conclusion</h2>
       <p>
-        Summarize the findings and insights gathered from the visualizations. Discuss the interplay between happiness, crime rates, other factors, and economic indicators, emphasizing the importance of addressing these factors for global well-being and happiness.
+        In conclusion, while crime undeniably affects happiness by instilling fear and insecurity, it is just one piece of a complex puzzle. Economic prosperity, good health, freedom, trust, and social connections all play vital roles in shaping a happier society. Addressing and improving these interconnected aspects holistically is key to fostering overall well-being and happiness in communities.
       </p>
     </div>
   </body>
